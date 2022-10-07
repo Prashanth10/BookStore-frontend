@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="{{ book.Image }}" alt="" style="width:80%">
+        </div>
+        <div class="col-lg-6 prodContent">
+            <div class="prod2">
+            <h3>{{ book.Title  }}</h3>
+            <p>{{ book.ISBN }}</p>
+            <p>{{ book.Description }}</p>
+            <p>{{ book.Year }}</p>
+            <h2>
+                {{book.Price | currency:'INR'}}
+            </h2>
+            <button class="btn btn-success vertical-center">Add to cart</button>
+            </div>
+            <button type="button" class="btn btn-primary">Add to Wishlist</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container wrapper">
+    <h2 class="text-center">Categories</h2>
+    <div class="row row-cols-4">
+        <div class="card col md-4" *ngFor="let category of categories">
+            <img src="{{ category.Image }}" class="card-img-top" alt="not found" width="200" height="200">
+            <div class="card-body content">
+                <h5 class="card-title">{{ category.Name }}</h5>
+                <p class="card-text">{{ category.Description }}</p>
+                <p class="card-text">{{ category.Position }}</p>
+                <p class="card-text">{{ category.CreatedAt }}</p>
+                <button class="btn btn-primary" (click)="onClickHandler(category.Id)">View Category</button>
+            </div>
+        </div>
+    </div>
+</div>

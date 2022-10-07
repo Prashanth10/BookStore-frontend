@@ -1,0 +1,17 @@
+
+<br>
+<div class="container">
+    <h2 class="text-center">Products</h2>
+    <div class="row row-cols-3 product">
+        <div class="card" *ngFor="let book of books">
+            
+            <img src="{{ book.Image }}" class="card-img-top" alt="not found">
+            <div class="card-body content">
+                <h5 class="card-title">{{ book.Title }}</h5>
+                <p class="card-title">{{ book.Position }}</p>
+                <p class="card-text">Price: <span class="text-success font-weight"> {{ book.Price | currency:'INR'}}</span></p>
+                <div class="text-center"><a [routerLink]="['/books/details/',book.Id]" class="btn btn-primary vertical-center">View product</a></div>  
+            </div>
+        </div>
+    </div>
+</div>

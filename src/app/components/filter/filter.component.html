@@ -1,0 +1,15 @@
+<div class="container">
+    <label for="fil">Choose a filter:</label>
+    <select #filterBy>
+        <option value="1">ISBN</option>
+        <option value="2">Title</option>
+    </select>
+    <div class="input-group">
+        <input #query type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" (click)="onClickHandler(filterBy.value,query.value)" class="btn btn-outline-primary">search</button>
+    </div>
+    <!-- <label for="fname">Search query:</label>
+    <input type="text" #query name="fname"><br><br>
+    
+    <input type="submit" (click)="onClickHandler(filterBy,query)" value="Submit" /> -->
+</div>
