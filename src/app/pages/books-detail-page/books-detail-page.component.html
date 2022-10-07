@@ -14,9 +14,9 @@
             <h2>
                 {{book.Price | currency:'INR'}}
             </h2>
-            <button class="btn btn-success vertical-center">Add to cart</button>
+            <button type="button" class="btn btn-primary" (click)="onClickHandler(1, book.Id)">Add to Wishlist</button>
             </div>
-            <button type="button" class="btn btn-primary">Add to Wishlist</button>
+            <button class="btn btn-success vertical-center" (click)="onClickHandler(2, book.Id)">Add to cart</button>
         </div>
     </div>
 </div>

@@ -39,6 +39,18 @@ export class DataService {
     return this.http.post<any>(`${this.BASE_URL}/book`, data)
   }
 
+  getWishlistByUserid(Id: any): Observable<any>{
+    return this.http.get<any>(`${this.BASE_URL}/book/${Id}`);
+  }
+
+  addToWishlist(data: any): Observable<any>{
+    return this.http.put<any>(`${this.BASE_URL}/wishlist`,data);
+  }
+
+  addToCart(data: any): Observable<any>{
+    return this.http.put<any>(`${this.BASE_URL}/cart`,data);
+  }
+
   login(data:any): Observable<any>{
     return this.http.post<any>(`${this.BASE_URL}/user/auth`,data);
   }

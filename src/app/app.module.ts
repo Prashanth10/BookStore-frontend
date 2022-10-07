@@ -17,6 +17,7 @@ import { BooksDetailPageComponent } from './pages/books-detail-page/books-detail
 import { BooksFilterPageComponent } from './pages/books-filter-page/books-filter-page.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { BooksListComponent } from './components/books-list/books-list.component';
+import { WishlistPageComponent } from './pages/wishlist-page/wishlist-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BooksListComponent } from './components/books-list/books-list.component
     BooksDetailPageComponent,
     BooksFilterPageComponent,
     FilterComponent,
-    BooksListComponent
+    BooksListComponent,
+    WishlistPageComponent
   ],
   imports: [
     BrowserModule,
