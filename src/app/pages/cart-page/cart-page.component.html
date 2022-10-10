@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <h2 class="text-center">Wishlist</h2>
+    <h2 class="text-center">Cart</h2>
     <div class="row-2 row-cols-1 product">
         <div class="card" *ngFor="let book of books">
             
@@ -8,8 +8,16 @@
             <div class="card-body content">
                 <h5 class="card-title">{{ book.bookData.Title }}</h5>
                 <p class="card-title">{{ book.bookData.Position }}</p>
+                <select #quantity (change)="">
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <p class="card-text">Per Item Price: <span class="text-success font-weight"> {{ book.bookData.Price | currency:'INR'}}</span></p>
                 <p class="card-text">Price: <span class="text-success font-weight"> {{ book.bookData.Price | currency:'INR'}}</span></p>
-                <div class="text-center"><a class="btn btn-danger vertical-center" (click)="onClickHandler(1, book.Id)">Remove from wishlist</a></div>
+                <div class="text-center"><a class="btn btn-danger vertical-center" (click)="onClickHandler(1, book.Id)">Remove from cart</a></div>
                 <div class="text-center"><a class="btn btn-success vertical-center" (click)="onClickHandler(2, book.bookData.Id)">Add to cart</a></div>
                 <div class="text-center"><a [routerLink]="['/books/details/',book.bookData.Id]" class="btn btn-primary vertical-center">View product</a></div>  
             </div>

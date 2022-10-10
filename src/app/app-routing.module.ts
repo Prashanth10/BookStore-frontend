@@ -6,6 +6,7 @@ import { BooksPageComponent } from './pages/books-page/books-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { WishlistPageComponent } from './pages/wishlist-page/wishlist-page.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'books', component: BooksFilterPageComponent},
   {path: 'books/:catId', component: BooksPageComponent},
   {path: 'books/details/:id', component: BooksDetailPageComponent},
+  {path: 'wishlist', component: WishlistPageComponent},
   {path: 'register', component: RegisterPageComponent},
   {path: 'login', component: LoginPageComponent}
 ];

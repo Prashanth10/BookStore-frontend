@@ -40,11 +40,15 @@ export class DataService {
   }
 
   getWishlistByUserid(Id: any): Observable<any>{
-    return this.http.get<any>(`${this.BASE_URL}/book/${Id}`);
+    return this.http.get<any>(`${this.BASE_URL}/wishlist/user?id=${Id}`);
   }
 
   addToWishlist(data: any): Observable<any>{
     return this.http.put<any>(`${this.BASE_URL}/wishlist`,data);
+  }
+
+  removeWishlist(Id: any): Observable<any>{
+    return this.http.delete<any>(`${this.BASE_URL}/wishlist/${Id}`);
   }
 
   addToCart(data: any): Observable<any>{

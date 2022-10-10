@@ -3,11 +3,11 @@ import { DataService } from 'src/app/services/data.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-wishlist-page',
-  templateUrl: './wishlist-page.component.html',
-  styleUrls: ['./wishlist-page.component.css']
+  selector: 'app-cart-page',
+  templateUrl: './cart-page.component.html',
+  styleUrls: ['./cart-page.component.css']
 })
-export class WishlistPageComponent implements OnInit {
+export class CartPageComponent implements OnInit {
 
   books: any[] = [];
   userId: any;
@@ -23,7 +23,8 @@ export class WishlistPageComponent implements OnInit {
         this.productDataService.getBookById(bookId).subscribe((response:any) =>{
           var data = {
             'Id': wishId,
-            'bookData': response
+            'bookData': response,
+            'Quantity': 1
           }
           this.books[i] = data;
           i+=1;
@@ -52,5 +53,4 @@ export class WishlistPageComponent implements OnInit {
       })
     }
   }
-
 }
